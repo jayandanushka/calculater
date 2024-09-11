@@ -50,7 +50,7 @@
 }
 
 .calculator-buttons button:hover {
-  background: #2175db; /* Change this color to your preference */
+  background: #21db40; /* Change this color to your preference */
   transform: scale(1.05);
 }
 
