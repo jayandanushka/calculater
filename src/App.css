@@ -50,13 +50,11 @@
 }
 
 .calculator-buttons button:hover {
-  background: #2175db; /* Change this color to your preference */
-  transform: scale(1.05);
+  background: #358af1; /* Change this color to your preference */
 }
 
 .calculator-buttons button:active {
-  background: #666;
-  transform: scale(1);
+  background:  #358af1;
 }
 
 .button-wide {
@@ -73,5 +71,12 @@
   }
   .App {
     background-color: #222;
-  }  
+  }
+  .calculator-buttons button:active {
+    background:  #358af1;
+  }
+  .calculator-buttons button:focus {
+    background: #444;
+    outline: 1px solid #333;
+  }
 }
