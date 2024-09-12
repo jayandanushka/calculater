@@ -1,3 +1,4 @@
+/* General container styling for the entire app */
 .App {
   display: flex;
   justify-content: center;
@@ -9,74 +10,86 @@
   margin: 0;
 }
 
+/* Calculator container */
 .calculator {
   display: flex;
   flex-direction: column;
   width: 100%;
-  max-width: 500px; /* Adjust as needed */
+  max-width: 500px; /* Limit the max width */
   height: 100%;
-  max-height: 600px; /* Adjust as needed */
-  background: #333;
+  max-height: 600px; /* Limit the max height */
+  background-color: #333;
   border-radius: 9px;
   overflow: hidden;
 }
 
+/* Calculator display styling */
 .calculator-display {
   width: 100%;
   height: 400px;
-  text-align: right;
   padding: 20px;
   font-size: 3em;
+  text-align: right;
   border: none;
-  background: #222;
+  background-color: #222;
   color: #fff;
   box-sizing: border-box;
 }
 
+/* Buttons grid layout */
 .calculator-buttons {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 1px; /* Optional: Adds spacing between buttons */
+  grid-template-columns: repeat(4, 1fr); /* Create a 4-column grid */
+  gap: 1px; /* Add spacing between buttons */
 }
 
+/* Button styling */
 .calculator-buttons button {
   height: 60px;
   font-size: 1.2em;
-  border: none; /* Remove borders */
-  background: #444;
+  border: none;
+  background-color: #444;
   color: white;
   cursor: pointer;
-  transition: background 0.3s ease, transform 0.1s ease;
+  transition: background-color 0.3s ease, transform 0.1s ease;
 }
 
+/* Hover and active state for buttons */
 .calculator-buttons button:hover {
-  background: #358af1; /* Change this color to your preference */
+  background-color: #358af1;
 }
 
 .calculator-buttons button:active {
-  background:  #358af1;
+  background-color: #358af1;
 }
 
+/* Wide button styling, e.g., for '0' and '←' */
 .button-wide {
-  grid-column: span 2; /* Makes the button span 2 columns */
+  grid-column: span 2; /* Span 2 columns in the grid */
 }
 
+/* Responsive design for small screens */
 @media (max-width: 480px) {
   .calculator-display {
-    font-size: 2em;
+    font-size: 2em; /* Smaller font size on small screens */
   }
 
   .calculator-buttons button {
-    font-size: 1.3em;
+    font-size: 1.3em; /* Slightly larger button text for smaller screens */
   }
+
+  /* Adjust the background color for small screens */
   .App {
     background-color: #222;
   }
+
+  /* Button active and focus states on mobile */
   .calculator-buttons button:active {
-    background:  #358af1;
+    background-color: #358af1;
   }
+
   .calculator-buttons button:focus {
-    background: #444;
+    background-color: #444;
     outline: 1px solid #333;
   }
 }
